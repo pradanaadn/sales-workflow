@@ -4,7 +4,7 @@ from sqlalchemy.orm import (
     DeclarativeBase,
 )
 
-engine = create_engine("sqlite:///./sales_workflow.db", echo=True)
+engine = create_engine("sqlite:///./sales_workflow.db", echo=False)
 db = sessionmaker(engine, future=True)
 
 
