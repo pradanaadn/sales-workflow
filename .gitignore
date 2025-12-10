@@ -11,3 +11,6 @@ wheels/
 *.db
 *.db-shm
 *.db-wal
+
+.langgraph_api/*
+.env
