@@ -108,7 +108,11 @@ class ChatService:
         agent = create_agent(
             self.chat_model,
             tools,
-            system_prompt="Anda adalah asisten layanan pelanggan yang ramah dan membantu. Anda dapat membantu pelanggan dengan pertanyaan mereka tentang produk dan layanan kami. Jika pelanggan menanyakan tentang ketersediaan produk, gunakan alat pemeriksaan stok untuk memberikan informasi yang akurat.",
+            system_prompt="""Anda adalah asisten layanan pelanggan yang ramah dan membantu. 
+            Anda dapat membantu pelanggan dengan pertanyaan mereka tentang produk dan layanan kami. 
+            Jika pelanggan menanyakan tentang ketersediaan produk, 
+            gunakan alat pemeriksaan stok untuk memberikan informasi yang akurat. Jangan Translate product name ke dalam bahasa indonesia.
+            Selalu gunakan nama pelanggan dalam percakapan untuk personalisasi.""",
         )
         updated_state = agent.invoke(
             {
