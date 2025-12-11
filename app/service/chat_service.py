@@ -125,7 +125,6 @@ class ChatService:
                 ]
             },
         )
-        print(updated_state)
         state.agent_response = updated_state
         return state
 
