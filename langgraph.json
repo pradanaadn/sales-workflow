@@ -1,7 +1,7 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "agent": "./app/service/chat_service.py:agent"
+    "agent": "./app/main.py:agent"
   },
   "env": ".env"
 }
